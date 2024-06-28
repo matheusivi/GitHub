@@ -1,0 +1,56 @@
+ Meu Projeto de ORM em Node.js
+
+Este projeto é uma implementação simples de um ORM (Object-Relational Mapping) em Node.js. Ele fornece uma classe base `ORM` que gerencia operações CRUD (Create, Read, Update, Delete) na memória. A classe `ORM` é abstrata e deve ser estendida para ser usada.
+
+Exemplo de uso da classe 'Animal':
+
+import ORM from './orm.js';
+
+class Animal extends ORM {
+    constructor() {
+        super();
+    }
+}
+const animal1 = new Animal();
+console.log(animal1.criar(1, { animal: 'Cachorro' }));
+console.log(animal1.listarMemoria());
+
+Métodos Disponíveis:
+
+criar(id, dado)
+Cria um novo item na memória.
+
+Parâmetros:
+
+id (number): O ID único do item.
+dado (object): Os dados do item.
+Retorno: Uma mensagem de sucesso ou erro.
+ler(id)
+Lê um item na memória pelo ID.
+
+Parâmetros:
+
+id (number): O ID do item a ser lido.
+Retorno: O item encontrado ou uma mensagem de erro.
+up(id, dado)
+Atualiza um item na memória pelo ID.
+
+Parâmetros:
+
+id (number): O ID do item a ser atualizado.
+dado (object): Os novos dados do item.
+Retorno: Uma mensagem de sucesso ou erro.
+delete(id)
+Deleta um item na memória pelo ID.
+
+Parâmetros:
+
+id (number): O ID do item a ser deletado.
+Retorno: Uma mensagem de sucesso ou erro.
+listarMemoria()
+Lista todos os itens na memória.
+
+Retorno: Uma lista de todos os itens ou uma mensagem de erro.
+Tratamento de Erros
+Todos os métodos tentam executar a operação e capturam qualquer erro que ocorra, retornando uma mensagem de erro apropriada.
+
