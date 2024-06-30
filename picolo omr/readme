@@ -1,4 +1,5 @@
- Meu Projeto de ORM em Node.js
+Projeto Matheus e Amanda
+Meu Projeto de ORM em Node.js
 
 Este projeto é uma implementação simples de um ORM (Object-Relational Mapping) em Node.js. Ele fornece uma classe base `ORM` que gerencia operações CRUD (Create, Read, Update, Delete) na memória. A classe `ORM` é abstrata e deve ser estendida para ser usada.
 
